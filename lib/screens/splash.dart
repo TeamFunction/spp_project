@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:project_spp/screens/home.dart';
+import 'package:project_spp/screens/intro.dart';
 // import 'package:projectspp/home.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -23,8 +24,7 @@ class _SplashScreen extends State<SplashScreen> with TickerProviderStateMixin {
     return Timer(duration, () {
       Navigator.push(
         context,
-        MaterialPageRoute(
-            builder: (context) => Home(title: 'Flutter Demo Home Page')),
+        MaterialPageRoute(builder: (context) => IntroScreen()),
       );
     });
   }
