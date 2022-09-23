@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:project_spp/screens/intro.dart';
+import 'package:project_spp/screens/login.dart';
 import 'package:project_spp/screens/splash.dart';
 
 void main() {
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: SplashScreen(),
+      // home: Login(),
       // home: IntroScreen(),
     );
   }

@@ -16,7 +16,7 @@ class _SplashScreen extends State<SplashScreen> with TickerProviderStateMixin {
     _controller = AnimationController(
         duration: Duration(milliseconds: 1000), vsync: this);
     _controller2 = AnimationController(
-        duration: Duration(milliseconds: 2000), vsync: this);
+        duration: Duration(milliseconds: 1500), vsync: this);
     super.initState();
     splashscreenStart();
     _controller.forward();
@@ -73,7 +73,7 @@ class _SplashScreen extends State<SplashScreen> with TickerProviderStateMixin {
                           ),
                         ))),
                 SizedBox(
-                  height: (sheight / 36) ?? 24.0,
+                  height: (sheight / 36),
                 ),
                 ScaleTransition(
                   scale:
@@ -83,7 +83,7 @@ class _SplashScreen extends State<SplashScreen> with TickerProviderStateMixin {
                     style: TextStyle(
                       color: Colors.black38,
                       fontWeight: FontWeight.bold,
-                      fontSize: (swidth / 15) ?? 30.0,
+                      fontSize: (swidth / 15),
                     ),
                   ),
                 ),

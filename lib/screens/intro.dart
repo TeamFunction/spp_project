@@ -3,6 +3,7 @@ import 'package:project_spp/models/intro_model.dart';
 import 'dart:async';
 
 import 'package:project_spp/screens/home.dart';
+import 'package:project_spp/screens/login.dart';
 // import 'package:projectspp/home.dart';
 
 class IntroScreen extends StatefulWidget {
@@ -41,8 +42,6 @@ class _IntroScreen extends State<IntroScreen> {
   Widget build(BuildContext context) {
     double sheight = MediaQuery.of(context).size.height;
     double swidth = MediaQuery.of(context).size.width;
-    print("height" + sheight.toString());
-    print("width" + swidth.toString());
     return Scaffold(
         backgroundColor: Colors.white,
         body: SizedBox(
@@ -52,7 +51,7 @@ class _IntroScreen extends State<IntroScreen> {
             children: <Widget>[
               Padding(
                   padding: EdgeInsets.symmetric(
-                      horizontal: 45.0, vertical: (sheight / 8) ?? 130.0),
+                      horizontal: 45.0, vertical: (sheight / 8)),
                   child: Container(
                     alignment: Alignment.topCenter,
                     height: (sheight >= 700) ? 500 : 400,
@@ -73,12 +72,12 @@ class _IntroScreen extends State<IntroScreen> {
                             children: [
                               Image.asset(
                                 screens[index].img,
-                                height: (sheight / 3) ?? 300,
+                                height: (sheight / 3),
                               ),
                               Text(
                                 screens[index].text,
                                 style: TextStyle(
-                                    fontSize: (swidth / 16) ?? 27.0,
+                                    fontSize: (swidth / 16),
                                     fontWeight: FontWeight.normal,
                                     color: Colors.black),
                                 textAlign: TextAlign.center,
@@ -95,7 +94,7 @@ class _IntroScreen extends State<IntroScreen> {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      height: (sheight / 8) ?? 140,
+                      height: (sheight / 8),
                       child: ListView.builder(
                           itemCount: screens.length,
                           shrinkWrap: true,
@@ -125,9 +124,7 @@ class _IntroScreen extends State<IntroScreen> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    Home(title: 'Flutter Demo Home Page')),
+                            MaterialPageRoute(builder: (context) => Login()),
                           );
                         },
                         child: Container(
