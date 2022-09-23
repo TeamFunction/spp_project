@@ -39,6 +39,10 @@ class _IntroScreen extends State<IntroScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double sheight = MediaQuery.of(context).size.height;
+    double swidth = MediaQuery.of(context).size.width;
+    print("height" + sheight.toString());
+    print("width" + swidth.toString());
     return Scaffold(
         backgroundColor: Colors.white,
         body: SizedBox(
@@ -47,11 +51,11 @@ class _IntroScreen extends State<IntroScreen> {
             alignment: AlignmentDirectional.topCenter,
             children: <Widget>[
               Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 45.0, vertical: 150.0),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: 45.0, vertical: (sheight / 8) ?? 130.0),
                   child: Container(
                     alignment: Alignment.topCenter,
-                    height: 500,
+                    height: (sheight >= 700) ? 500 : 400,
                     child: PageView.builder(
                         itemCount: screens.length,
                         controller: _pageController,
@@ -69,12 +73,12 @@ class _IntroScreen extends State<IntroScreen> {
                             children: [
                               Image.asset(
                                 screens[index].img,
-                                height: 300,
+                                height: (sheight / 3) ?? 300,
                               ),
                               Text(
                                 screens[index].text,
                                 style: TextStyle(
-                                    fontSize: 27.0,
+                                    fontSize: (swidth / 16) ?? 27.0,
                                     fontWeight: FontWeight.normal,
                                     color: Colors.black),
                                 textAlign: TextAlign.center,
@@ -91,7 +95,7 @@ class _IntroScreen extends State<IntroScreen> {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      height: 140,
+                      height: (sheight / 8) ?? 140,
                       child: ListView.builder(
                           itemCount: screens.length,
                           shrinkWrap: true,
