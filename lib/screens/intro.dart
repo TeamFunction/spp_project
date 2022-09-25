@@ -124,7 +124,7 @@ class _IntroScreen extends State<IntroScreen> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Login()),
+                            MaterialPageRoute(builder: (context) => toLogin()),
                           );
                         },
                         child: Container(
