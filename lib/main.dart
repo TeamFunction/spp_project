@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:project_spp/screens/intro.dart';
 import 'package:project_spp/screens/login.dart';
+import 'package:project_spp/screens/profile.dart';
 import 'package:project_spp/screens/splash.dart';
+import 'package:project_spp/screens/tes.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -26,7 +28,8 @@ class MyApp extends StatelessWidget {
       // home: Scaffold(
       //   body: const MyCustomForm(),
       // ),
-      home: Login(),
+      home: Profile(),
+      // home: Tes(),
       // home: IntroScreen(),
     );
   }

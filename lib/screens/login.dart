@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:project_spp/conf.dart';
 import 'package:project_spp/screens/home.dart';
 
 class toLogin extends StatelessWidget {
@@ -17,8 +19,8 @@ class toLogin extends StatelessWidget {
             Positioned(
               top: 0,
               left: 0,
-              child: Image.asset(
-                "assets/images/vector_1.png",
+              child: SvgPicture.asset(
+                bgTV,
                 width: swidth,
               ),
             ),
@@ -26,8 +28,8 @@ class toLogin extends StatelessWidget {
               bottom: 0,
               child: Container(
                 alignment: Alignment.topCenter,
-                child: Image.asset(
-                  "assets/images/vector_2.png",
+                child: SvgPicture.asset(
+                  bgBV,
                   width: swidth,
                 ),
               ),
@@ -56,7 +58,7 @@ class toLogin extends StatelessWidget {
                     Center(
                         child: Container(
                       height: (sheight / 4),
-                      child: Image.asset("assets/images/smk.png"),
+                      child: Image.asset(imgSMK),
                     )),
                     Container(
                       // padding: EdgeInsets.only(top: 50),
@@ -134,29 +136,32 @@ class LoginState extends State<Login> {
     double sheight = MediaQuery.of(context).size.height;
     double swidth = MediaQuery.of(context).size.width;
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Container(
             height: sheight,
             child: Stack(children: [
               Positioned(
-                  bottom: 0,
-                  right: 0,
-                  child: Image.asset(
-                    "assets/images/vector_3.png",
-                    fit: BoxFit.contain,
-                    width: (swidth / 1.5),
-                  )),
+                bottom: 0,
+                right: 0,
+                child: SvgPicture.asset(
+                  bgRBE,
+                  fit: BoxFit.contain,
+                ),
+              ),
               Center(
                   child: Container(
                       decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.67),
-                          borderRadius: BorderRadius.all(Radius.circular(15)),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.grey.withOpacity(0.5),
-                                blurRadius: 12,
-                                spreadRadius: 0,
-                                offset: Offset(0, 6))
-                          ]),
+                        color: Colors.white.withOpacity(0.67),
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            blurRadius: 12,
+                            spreadRadius: 0,
+                            offset: Offset(0, 6),
+                          ),
+                        ],
+                      ),
                       margin: EdgeInsets.symmetric(
                           horizontal: 50, vertical: (sheight / 4)),
                       child: Container(
@@ -175,10 +180,11 @@ class LoginState extends State<Login> {
                                   Text(
                                     "LOGIN AKUN",
                                     style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                        decoration: TextDecoration.underline,
-                                        fontSize: (sheight / 40)),
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      decoration: TextDecoration.underline,
+                                      fontSize: (sheight / 40),
+                                    ),
                                   ),
                                   TextFormField(
                                     decoration: InputDecoration(
@@ -210,74 +216,72 @@ class LoginState extends State<Login> {
                                   Column(
                                     children: [
                                       Container(
-                                          child: ClipRRect(
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10)),
-                                              child: Stack(
-                                                children: [
-                                                  Positioned.fill(
-                                                      child: Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                    color: Color.fromRGBO(
-                                                        73, 122, 167, 0.64),
-                                                  ))),
-                                                  TextButton(
-                                                      style: TextButton.styleFrom(
-                                                          padding: EdgeInsets
-                                                              .symmetric(
-                                                                  horizontal:
-                                                                      swidth /
-                                                                          8,
-                                                                  vertical:
-                                                                      (sheight /
-                                                                          45)),
-                                                          textStyle: TextStyle(
-                                                              color: Colors
-                                                                  .white),
-                                                          alignment: Alignment
-                                                              .center),
-                                                      onPressed: () {
-                                                        if (_formKey
-                                                            .currentState!
-                                                            .validate()) {
-                                                          Navigator.push(
-                                                            context,
-                                                            MaterialPageRoute(
-                                                                builder: (context) =>
-                                                                    Home(
-                                                                        title:
-                                                                            'Flutter Demo Home Page')),
-                                                          );
-                                                        }
-                                                      },
-                                                      child: Text(
-                                                          "LOGIN",
-                                                          style: TextStyle(
-                                                              fontSize: 20,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color: Colors
-                                                                  .white))),
-                                                ],
-                                              ))),
-                                      TextButton(
-                                          style: TextButton.styleFrom(
-                                            onSurface: Colors.transparent,
-                                            textStyle: TextStyle(
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.w300,
-                                                decoration:
-                                                    TextDecoration.underline),
-                                            alignment: Alignment.center,
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10)),
+                                          child: Stack(
+                                            children: [
+                                              Positioned.fill(
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                    color: Color.fromARGB(
+                                                        162, 15, 135, 247),
+                                                  ),
+                                                ),
+                                              ),
+                                              TextButton(
+                                                style: TextButton.styleFrom(
+                                                    textStyle: TextStyle(
+                                                        color: Colors.white),
+                                                    alignment:
+                                                        Alignment.center),
+                                                onPressed: () {
+                                                  if (_formKey.currentState!
+                                                      .validate()) {
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) => Home(
+                                                            title:
+                                                                'Flutter Demo Home Page'),
+                                                      ),
+                                                    );
+                                                  }
+                                                },
+                                                child: Center(
+                                                  child: Text(
+                                                    "LOGIN",
+                                                    style: TextStyle(
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        color: Colors.white),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                          onPressed: () {},
-                                          child: Text("Lupa Sandi",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  decoration: TextDecoration
-                                                      .underline))),
+                                        ),
+                                      ),
+                                      TextButton(
+                                        style: TextButton.styleFrom(
+                                          onSurface: Colors.transparent,
+                                          textStyle: TextStyle(
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w300,
+                                              decoration:
+                                                  TextDecoration.underline),
+                                          alignment: Alignment.center,
+                                        ),
+                                        onPressed: () {},
+                                        child: Text(
+                                          "Lupa Sandi",
+                                          style: TextStyle(
+                                              color: Colors.blue,
+                                              decoration:
+                                                  TextDecoration.underline),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ],
