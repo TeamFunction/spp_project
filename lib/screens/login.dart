@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:project_spp/conf.dart';
 import 'package:project_spp/screens/home.dart';
+import 'package:project_spp/screens/navbar.dart';
 
 class toLogin extends StatelessWidget {
   @override
@@ -243,9 +244,7 @@ class LoginState extends State<Login> {
                                                         context,
                                                         MaterialPageRoute(
                                                           builder: (context) =>
-                                                              Home(
-                                                                  title:
-                                                                      'Flutter Demo Home Page'),
+                                                              Pages(),
                                                         ),
                                                       );
                                                     }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:project_spp/conf.dart';
 import 'dart:async';
 
 import 'package:project_spp/screens/home.dart';
@@ -48,9 +50,10 @@ class _SplashScreen extends State<SplashScreen> with TickerProviderStateMixin {
               child: FadeTransition(
                 opacity:
                     Tween<double>(begin: 0.0, end: 1.0).animate(_controller),
-                child: Image.asset(
-                  "assets/images/vector_1.png",
-                  fit: BoxFit.scaleDown,
+                child: SvgPicture.asset(
+                  bgTV,
+                  width: swidth,
+                  fit: BoxFit.contain,
                 ),
               ),
             ),
@@ -67,7 +70,7 @@ class _SplashScreen extends State<SplashScreen> with TickerProviderStateMixin {
                             width: 200,
                             height: 100,
                             child: Image.asset(
-                              "assets/images/smk.png",
+                              imgSMK,
                               fit: BoxFit.scaleDown,
                             ),
                           ),
@@ -94,9 +97,10 @@ class _SplashScreen extends State<SplashScreen> with TickerProviderStateMixin {
               child: FadeTransition(
                 opacity:
                     Tween<double>(begin: 0.0, end: 1.0).animate(_controller),
-                child: Image.asset(
-                  "assets/images/vector_2.png",
-                  fit: BoxFit.scaleDown,
+                child: SvgPicture.asset(
+                  bgBV,
+                  width: swidth,
+                  fit: BoxFit.contain,
                 ),
               ),
             )

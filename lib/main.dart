@@ -25,11 +25,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: SplashScreen(),
+      home: SplashScreen(),
       // home: Scaffold(
       //   body: const MyCustomForm(),
       // ),
-      home: Pages(),
+      // home: Pages(),
       // home: Tes(),
       // home: IntroScreen(),
     );
