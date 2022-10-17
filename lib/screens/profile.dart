@@ -1,65 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:project_spp/conf.dart';
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
 
   @override
+  State<Profile> createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+ 
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // extendBody:
-      //     true, // Important: to remove background of bottom navigation (making the bar transparent doesn't help)
-      // bottomNavigationBar: Container(
-      //   decoration: const BoxDecoration(
-      //     borderRadius: BorderRadius.only(
-      //       topLeft: Radius.circular(12.0), // adjust to your liking
-      //       topRight: Radius.circular(12.0), // adjust to your liking
-      //     ),
-      //     color: Color.fromARGB(255, 43, 155, 247), // put the color here
-      //   ),
-      bottomNavigationBar: ClipRRect(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(15.0),
-          topRight: Radius.circular(15.0),
-        ),
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-              colors: <Color>[
-                Color.fromARGB(255, 0, 132, 255),
-                Color.fromARGB(255, 0, 221, 255),
-              ], // Gradient from https://learnui.design/tools/gradient-generator.html
-              tileMode: TileMode.clamp,
-            ),
-          ),
-          child: BottomNavigationBar(
-            backgroundColor: Colors.transparent,
-            unselectedItemColor: Colors.white.withOpacity(0.5),
-            elevation: 0,
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.business),
-                label: 'Business',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.school),
-                label: 'School',
-              ),
-            ],
-            // currentIndex: _selectedIndex,
-            selectedItemColor: Colors.white,
-            // onTap: _onItemTapped,
-          ),
-        ),
-      ),
-      body: Container(
+    return Container(
         child: Stack(
           children: [
             Container(
@@ -93,7 +49,6 @@ class Profile extends StatelessWidget {
             ),
           ],
         ),
-      ),
     );
   }
 }
