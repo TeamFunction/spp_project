@@ -15,3 +15,6 @@ final String imgSMK = 'assets/images/smk.png';
 final String imgRBE = 'assets/images/right_bottom_ellipse.png';
 final String imgBV = 'assets/images/bottom_vector.png';
 final String imgTV = 'assets/images/top_vector.png';
+
+final String PP = 'assets/images/foto.jpg';
+final String PP1 = 'assets/images/foto1.jpg';

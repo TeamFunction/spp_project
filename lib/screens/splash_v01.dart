@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:project_spp/screens/home.dart';
+import 'package:project_spp/screens/pages/home.dart';
 import 'package:project_spp/screens/intro.dart';
 // import 'package:projectspp/home.dart';
 

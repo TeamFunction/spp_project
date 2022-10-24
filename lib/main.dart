@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:project_spp/screens/intro.dart';
 import 'package:project_spp/screens/login.dart';
 import 'package:project_spp/screens/navbar.dart';
-import 'package:project_spp/screens/profile.dart';
+import 'package:project_spp/screens/pages/profile.dart';
 import 'package:project_spp/screens/splash.dart';
 import 'package:project_spp/screens/tes.dart';
 
@@ -25,11 +25,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(),
+      // home: SplashScreen(),
       // home: Scaffold(
       //   body: const MyCustomForm(),
       // ),
-      // home: Pages(),
+      home: Pages(),
       // home: Tes(),
       // home: IntroScreen(),
     );

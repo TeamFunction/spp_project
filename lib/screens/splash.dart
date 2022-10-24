@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:project_spp/conf.dart';
 import 'dart:async';
 
-import 'package:project_spp/screens/home.dart';
+import 'package:project_spp/screens/pages/home.dart';
 import 'package:project_spp/screens/intro.dart';
 // import 'package:projectspp/home.dart';
 

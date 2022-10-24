@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project_spp/models/intro_model.dart';
 import 'dart:async';
 
-import 'package:project_spp/screens/home.dart';
+import 'package:project_spp/screens/pages/home.dart';
 import 'package:project_spp/screens/login.dart';
 // import 'package:projectspp/home.dart';
 
@@ -124,7 +124,7 @@ class _IntroScreen extends State<IntroScreen> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => toLogin()),
+                            MaterialPageRoute(builder: (context) => Login()),
                           );
                         },
                         child: Container(

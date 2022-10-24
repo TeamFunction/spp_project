@@ -83,7 +83,7 @@ class _PagesState extends State<Pages> {
                     color: Colors.white,
                   ),
                 ),
-                label: 'School',
+                label: 'Akun',
               ),
             ],
             currentIndex: _selectedIndex,
