@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_spp/components/button.dart';
+import 'package:project_spp/components/topbar.dart';
 import 'package:project_spp/models/profile_model.dart';
 
 class Profile extends StatefulWidget {
@@ -14,48 +15,8 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: 130,
-          width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
-            // color: Colors.amber.shade300,
-            gradient: const LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: <Color>[
-                Color(0xff0085FF),
-                Color(0xf600DEFF),
-              ], // Gradient from https://learnui.design/tools/gradient-generator.html
-              tileMode: TileMode.mirror,
-            ),
-
-            borderRadius: const BorderRadius.only(
-              bottomLeft: Radius.circular(30),
-              bottomRight: Radius.circular(30),
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.4),
-                spreadRadius: 1,
-                blurRadius: 4,
-                offset: const Offset(0, 1),
-              ),
-            ],
-          ),
-          child: Center(
-            child: Container(
-              height: 40,
-              width: MediaQuery.of(context).size.width * 0.7,
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
-              child: const Center(
-                  child: Text(
-                "PROFIL",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-              )),
-            ),
-          ),
+        const TopBar(
+          title: "PROFIL",
         ),
         const SizedBox(
           height: 50,
