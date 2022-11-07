@@ -5,14 +5,22 @@ import 'package:project_spp/conf.dart';
 import 'package:project_spp/screens/item.dart';
 
 class Pages extends StatefulWidget {
-  const Pages({Key? key}) : super(key: key);
-
+  const Pages({this.index = 0, Key? key}) : super(key: key);
+  final int index;
   @override
-  State<Pages> createState() => _PagesState();
+  State<Pages> createState() => _PagesState(index);
 }
 
 class _PagesState extends State<Pages> {
-  int _selectedIndex = 0;
+  _PagesState(this.i);
+  int i;
+  late int _selectedIndex = i;
+  @override
+  void initState() {
+    super.initState();
+    // you can use this.widget.foo here
+  }
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
